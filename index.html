@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Motorolls - Online Automotive Videography Contest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="A new design system for developing with less effort.">
+    <meta name="author" content="BootstrapBay">
+
+    <link href="assets/mrs.png" rel="icon" type="image/png" class="center">
+    
+    <link rel="stylesheet" href="./assets/vendor/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="./assets/css/lazy.css">
+		<link rel="stylesheet" href="./assets/css/demo.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+  </head>
+  <body class="landing">    
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<img src="assets/mrs.png" alt="Example Navbar 1" class="img-fluid">
+				<!-- Display the countdown timer in an element -->
+				<h1 style="text-align:center;"> Launching in</h1>
+				<h3 id="demo" style="text-align:center;"></h3>				
+			</div>
+		</div>
+	</div>
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("July 3, 2020 00:00:01").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    
+<footer class="footer-1 bg-light text-dark">
+<div class="container">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+	<div class="links">
+		<ul class="footer-menu list-unstyled d-flex flex-row text-center text-md-left">
+			<!--<li><a href="https://bootstrapbay.com/" target="_blank">Store</a></li>
+			<li><a href="https://bootstrapbay.com/about" target="_blank">About Us</a></li>
+			<li><a href="https://bootstrapbay.com/blog/" target="_blank">Blog</a></li>
+			<li><a href="https://bootstrapbay.com/terms" target="_blank">Terms & Conditions</a></li>-->
+		</ul>
+	</div>
+	<div class="social mt-4 mt-md-0">
+    <a class="twitter btn btn-outline-primary btn-icon" href="https://instagram.com/" target="_blank">
+      <i class="fab fa-instagram"></i>
+      <span class="sr-only">View our Instagram</span>
+    </a>
+    <a class="facebook btn btn-outline-primary btn-icon" href="https://www.facebook.com/" target="_blank">
+      <i class="fab fa-facebook"></i>
+      <span class="sr-only">View our Facebook Profile
+        <span>
+    </a>    
+  </div>
+</div>
+<div class="copyright text-center">
+	<hr />
+	<p class="small">&copy; <a href="https://ajce.in/ma/" target="_blank">Department of Mechanical Engineering Automobile</a>
+		<script type="text/javascript">
+		  var today = new Date()
+		  var year = today.getFullYear()
+		  document.write(year)
+		</script> </p>
+</div>
+</div>
+</footer>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js" ></script>
+
+    <!-- optional plugins -->
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+
+    <!--   lazy javascript -->
+    <script src="./assets/js/lazy.js"></script>
+  </body>
+</html>
